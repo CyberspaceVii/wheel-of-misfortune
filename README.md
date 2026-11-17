@@ -6,7 +6,7 @@ It runs on any web server with PHP. There is no database, no build step and no a
 
 **18+ only.** The six starter wheels are explicit BDSM and kink content (domination and submission, impact play, chastity, worship, humiliation). Don't host it where minors can reach it. Every visit starts with an age gate.
 
-Topics: adult party game, couples game, kink and BDSM game, dare wheel, spin the wheel, random picker, truth or dare for adults, self-hosted web game, vanilla JavaScript, HTML5 canvas, PHP, Piper TTS.
+Topics: adult party game, couples game, kinky BDSM and S&M game, kink, dare wheel, spin the wheel, random picker, truth or dare for adults, self-hosted web game, vanilla JavaScript, HTML5 canvas, PHP, Piper TTS.
 
 ## How to play
 
