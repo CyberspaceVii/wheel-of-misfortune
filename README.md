@@ -279,4 +279,8 @@ The music, fonts and photos belong to their creators and keep their own licences
 
 ## License
 
-The code is under the [WTFPL](http://www.wtfpl.net/), version 2: do what you want with it. It comes with no warranty. The music, fonts and photos aren't covered; see Credits.
+The code is under the [WTFPL](http://www.wtfpl.net/), version 2: do what you want with it.
+
+It comes without any warranty, to the extent permitted by applicable law. Play safe: every dare is a suggestion, and both players' consent comes first.
+
+The licence covers the code only. The music, fonts and photos keep their own licences; see Credits.
