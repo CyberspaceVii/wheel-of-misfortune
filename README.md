@@ -276,3 +276,7 @@ The music, fonts and photos belong to their creators and keep their own licences
 - Wallpaper photo credits in `public/img/CREDITS.txt`.
 - Spoken results by [Piper](https://github.com/rhasspy/piper). The voice model's licence is on its Hugging Face page.
 - The starter wheels link to Wikipedia for background reading.
+
+## License
+
+The code is under the [WTFPL](http://www.wtfpl.net/), version 2: do what you want with it. It comes with no warranty. The music, fonts and photos aren't covered; see Credits.
