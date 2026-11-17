@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en" class="mouse" data-screen="intro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="theme-color" content="#070305">
+<title>Wheel of Misfortune</title>
+<link rel="preload" href="fonts/echoes-dominion.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="type/modern-typewriter.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="img/brand/heart-ink.png" as="image">
+<link rel="stylesheet" href="css/wom.css">
+<script src="js/wall.js"></script>
+<script type="module" src="js/main.js"></script>
+</head>
+<body>
+<div class="smoke" aria-hidden="true"><i></i><i></i><i></i></div>
+<time class="clock" aria-label="Current date and time"><span class="clock-d"></span><span class="clock-t"></span><span class="clock-ap"></span></time>
+
+<!-- ============ age gate: every visit; entering is also the click that starts the music ============ -->
+<section id="gate" aria-labelledby="gate-title" aria-describedby="gate-text">
+  <div class="smoke-in" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="gate-box" role="dialog" aria-modal="true" aria-labelledby="gate-title" aria-describedby="gate-text">
+    <div class="smoke-in" aria-hidden="true"><i></i><i></i><i></i></div>
+    <h1 id="gate-title" class="gate-title">Adults only</h1>
+    <div id="gate-text" class="gate-text">
+      <p>Wheel of Misfortune is a game for grown-ups. It contains strong language, explicit sexual situations and BDSM themes.</p>
+      <p>Please enter only if you are 18 or older and comfortable with that kind of content.</p>
+    </div>
+    <div class="gate-actions">
+      <button id="gate-yes" class="spin-btn" type="button">I'm eighteen or older&nbsp;&middot;&nbsp;Enter</button>
+      <button id="gate-no" class="ghost" type="button">I'm under eighteen &middot; Leave</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ opening titles ============ -->
+<section id="intro" class="screen" aria-label="Opening titles">
+  <div class="studio" aria-label="Cyberspace7.org presents">
+    <div class="sig-row">
+<!-- built by tools/studio-mark.py (static; the intro fades it in) -->
+<svg class="studio-mark" viewBox="0 0 8345 1927" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs><mask id="hmm" maskUnits="userSpaceOnUse" x="0" y="0" width="512" height="512"><path d="M26.0,422.0L26.0,433.0L30.0,445.0L46.0,461.0L68.0,470.0L105.0,470.0L134.0,462.0L162.0,450.0L175.0,441.0L180.0,431.0L206.0,431.0L211.0,420.0L230.0,405.0L237.0,395.0L233.0,384.0L185.0,339.0L153.0,300.0L126.0,256.0L117.0,233.0L114.0,218.0L114.0,199.0L120.0,176.0L122.0,155.0L116.0,153.0L110.0,147.0L104.0,134.0L98.0,109.0L98.0,83.0L103.0,61.0L106.0,55.0L122.0,45.0L129.0,16.0" fill="none" stroke="#fff" stroke-width="39.3" stroke-linecap="butt" stroke-linejoin="round"/><path d="M27.0,418.0L27.0,421.0L28.0,415.0L32.0,408.0L45.0,396.0L64.0,389.0L83.0,389.0L117.0,397.0L144.0,407.0L169.0,418.0L177.0,425.0L179.0,430.0" fill="none" stroke="#fff" stroke-width="39.3" stroke-linecap="butt" stroke-linejoin="round"/><path d="M122.0,47.0L132.0,58.0L138.0,77.0L146.0,92.0L158.0,108.0L163.0,121.0L187.0,118.0L211.0,118.0L237.0,127.0L257.0,143.0L267.0,147.0L276.0,143.0L291.0,130.0L310.0,121.0L322.0,118.0L346.0,118.0L370.0,121.0L374.0,109.0L384.0,96.0L393.0,80.0L401.0,57.0L404.0,52.0L411.0,47.0L404.0,16.0" fill="none" stroke="#fff" stroke-width="39.3" stroke-linecap="butt" stroke-linejoin="round"/><path d="M123.0,155.0L134.0,150.0L146.0,137.0L156.0,130.0L162.0,122.0" fill="none" stroke="#fff" stroke-width="39.3" stroke-linecap="butt" stroke-linejoin="round"/><path d="M206.0,432.0L216.0,443.0L291.0,485.0L315.0,493.0L348.0,496.0L372.0,492.0L398.0,481.0L419.0,466.0L435.0,450.0L440.0,438.0L438.0,433.0L426.0,424.0L420.0,415.0L408.0,415.0" fill="none" stroke="#fff" stroke-width="39.3" stroke-linecap="butt" stroke-linejoin="round"/><path d="M238.0,394.0L255.0,399.0L262.0,403.0L271.0,403.0L286.0,394.0L321.0,366.0L351.0,336.0L373.0,309.0L393.0,280.0L410.0,248.0L415.0,235.0L418.0,217.0L417.0,190.0L412.0,172.0L411.0,159.0L410.0,156.0L401.0,152.0L370.0,122.0" fill="none" stroke="#fff" stroke-width="39.3" stroke-linecap="butt" stroke-linejoin="round"/><path d="M411.0,156.0L418.0,152.0L425.0,142.0L433.0,119.0L435.0,100.0L433.0,75.0L429.0,60.0L423.0,52.0L412.0,47.0" fill="none" stroke="#fff" stroke-width="39.3" stroke-linecap="butt" stroke-linejoin="round"/></mask><filter id="inkf" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0 0 0 0 0.824 0 0 0 0 0.016 0 0 0 0 0.176 0 0 0 1 0"/></filter></defs><g class="sig-name" fill="#d2042d"><path transform="translate(122 1455) scale(1 -1)" d="M247 -237H241Q166 -237 119.5 -203.5Q73 -170 51.5 -110.5Q30 -51 30 27Q30 150 75.0 303.0Q120 456 196.0 609.0Q272 762 365.5 891.0Q459 1020 558.5 1099.0Q658 1178 749 1178Q770 1178 789 1174Q843 1160 863.0 1113.0Q883 1066 883 1006Q883 948 872.0 891.0Q861 834 851 795Q833 723 818 678Q817 674 816 671Q814 664 812 658Q810 653 809 649L803 635Q789 610 773 610Q765 610 758.5 618.5Q752 627 752 644V652Q752 661 755 676Q756 678 756 680Q761 709 768.5 747.0Q776 785 783.0 814.0Q790 843 790 843Q792 852 798.5 857.5Q805 863 813 863H815Q816 867 817 872Q824 901 831.5 946.0Q839 991 839 1035Q839 1075 828.0 1106.0Q817 1137 788 1147Q770 1153 751 1153Q673 1153 581.0 1071.0Q489 989 398.5 857.5Q308 726 233.5 572.0Q159 418 114.0 267.5Q69 117 69 3Q69 -92 106.0 -149.5Q143 -207 228 -207H232Q337 -202 459.0 -121.5Q581 -41 698.5 78.5Q816 198 908.0 320.5Q1000 443 1046 532Q1053 542 1061 542L1065 541Q1072 538 1072 530Q1072 526 1069 521Q1020 425 929.0 298.5Q838 172 722.5 51.0Q607 -70 484.0 -151.0Q361 -232 247 -237Z"/><path transform="translate(1169 1455) scale(1 -1)" d="M-234 -320Q-265 -320 -283.5 -301.0Q-302 -282 -302 -246Q-302 -209 -278.5 -155.0Q-255 -101 -202 -33Q-49 152 156 324Q200 483 219 580Q219 583 220 585Q226 614 226 624Q226 630 224 630Q218 630 192 590Q173 563 148 525Q116 476 82.5 428.5Q49 381 23 355Q4 336 -12 336Q-23 336 -33 346Q-39 353 -39 370Q-39 401 -25.0 451.5Q-11 502 4.5 545.5Q20 589 26 606Q28 611 28 611Q37 627 51 627L60 625Q68 622 72.5 615.5Q77 609 77 601L75 593Q74 591 62.0 565.0Q50 539 35.0 501.5Q20 464 8.0 428.5Q-4 393 -4 375V371Q-2 369 0 369Q12 369 40.5 409.5Q69 450 105 506Q139 557 171 604Q199 644 224.5 669.0Q250 694 265 694Q279 694 280 665Q280 639 265 584Q264 579 262 574Q240 490 200 360Q372 501 444 539L452 541Q458 541 461.0 537.5Q464 534 464 529Q464 523 456 518Q331 439 187 319Q147 192 94.5 65.5Q42 -61 -25 -164Q-81 -245 -137.0 -282.5Q-193 -320 -234 -320ZM-233 -296Q-206 -296 -166.5 -268.0Q-127 -240 -81 -180Q-14 -90 47.5 37.5Q109 165 145 284Q-61 115 -186 -45Q-233 -109 -254.0 -159.5Q-275 -210 -275 -243Q-275 -294 -233 -296Z"/><path transform="translate(1611 1455) scale(1 -1)" d="M-4 32Q-43 32 -47 94Q-47 128 -27.5 177.5Q-8 227 37.5 286.5Q83 346 158 411Q153 427 142.5 433.5Q132 440 121 440Q104 440 89 430Q27 392 -24 278Q-26 269 -33.0 263.5Q-40 258 -48 258L-54 259Q-73 266 -73 283L-72 289Q-70 295 -69 302Q-39 417 17.0 586.0Q73 755 166 932Q218 1025 265.0 1069.0Q312 1113 343 1113Q379 1113 382 1058Q382 1026 365.0 977.0Q348 928 311 864Q236 732 51 524Q43 516 33 516Q28 516 24 517Q-10 411 -15 372Q28 434 70 456Q93 469 114 469Q153 469 177 425Q291 508 383 539L391 541Q398 541 401.5 537.5Q405 534 405 529Q405 522 392 516Q283 468 186 386L187 368Q187 292 137 185Q99 104 61.5 68.0Q24 32 -4 32ZM54 603Q202 776 268 890Q339 1015 339 1049Q339 1064 329 1063Q312 1063 274.5 1024.0Q237 985 196 919Q118 784 54 603ZM-4 62Q14 62 46.0 94.0Q78 126 115 197Q134 236 147.5 284.0Q161 332 164 368Q62 269 19.5 196.0Q-23 123 -23 88Q-23 62 -4 62Z"/><path transform="translate(1994 1455) scale(1 -1)" d="M9 199Q-37 199 -64.0 226.5Q-91 254 -91 306Q-91 340 -78.0 383.0Q-65 426 -36 478Q-22 504 8.0 546.5Q38 589 75.5 624.0Q113 659 148 659Q168 659 184 644Q203 626 203 599Q203 568 181.5 532.5Q160 497 123.5 472.5Q87 448 43 448Q21 448 -5 457Q-11 447 -16 436Q-60 350 -60 300Q-60 231 5 231Q43 231 98.5 260.5Q154 290 216 348Q269 401 311.5 450.5Q354 500 374 526Q385 541 394 541Q394 541 394.5 541.0Q395 541 396.5 540.5Q398 540 399.0 539.0Q400 538 401.0 536.0Q402 534 403 531V529Q403 522 396 512Q387 500 376 486Q320 411 237 322Q173 259 114.0 229.0Q55 199 9 199ZM21 477Q62 477 93.5 502.0Q125 527 143.0 558.5Q161 590 161 608Q161 622 150 623Q135 623 100.0 591.0Q65 559 6 478Z"/><path transform="translate(2375 1455) scale(1 -1)" d="M47 129Q35 129 25 133Q10 139 3.5 154.5Q-3 170 -3 192Q-3 238 16.5 299.5Q36 361 58.5 413.5Q81 466 92 490Q93 490 93 491Q36 491 12.0 505.0Q-12 519 -14 547Q-14 573 -1.5 602.5Q11 632 22 648Q31 662 43 662Q53 662 61.5 655.0Q70 648 70 637Q70 633 67 626Q60 610 54 598Q37 568 37 555Q37 539 73 541L133 543Q143 543 150.0 536.5Q157 530 158 520Q158 512 155.0 507.5Q152 503 147 498Q144 495 141 491Q106 442 65.0 347.0Q24 252 24 197Q24 169 42 162Q83 162 188.5 276.0Q294 390 370 526Q372 530 373 533Q375 539 378.0 542.5Q381 546 388 546Q393 546 397.0 543.0Q401 540 401 534V532Q400 525 394 512Q373 471 332.0 408.0Q291 345 240.5 281.0Q190 217 139.0 173.0Q88 129 47 129Z"/><path transform="translate(2746 1455) scale(1 -1)" d="M-15 86Q-49 86 -72.0 102.5Q-95 119 -95 151Q-95 188 -51.5 244.5Q-8 301 97 372Q76 398 56.5 427.5Q37 457 22 482Q-4 529 -4 571Q-4 627 31.5 669.5Q67 712 118.5 736.5Q170 761 217 761Q259 761 288.5 739.0Q318 717 318 668Q318 634 300 586Q291 569 275 569L267 570Q252 578 252 592Q252 597 254 602Q266 636 266 659Q266 690 248.5 704.0Q231 718 206 718Q171 718 131.0 697.0Q91 676 62.5 640.0Q34 604 34 560Q34 531 49 501Q62 477 82.0 445.5Q102 414 121 387Q217 445 305.0 485.0Q393 525 444 540L450 541Q461 541 463 534V531Q463 526 459.5 521.5Q456 517 448 516Q403 503 315.0 463.5Q227 424 135 364Q162 313 162 266Q162 224 144.0 189.0Q126 154 96 129Q69 107 40.0 96.5Q11 86 -15 86ZM-21 107Q0 107 26.0 118.0Q52 129 78 152Q102 173 118.5 204.5Q135 236 135 272Q135 309 112 348Q14 278 -26.0 226.5Q-66 175 -66 145Q-66 107 -21 107Z"/><path transform="translate(3185 1455) scale(1 -1)" d="M-170 -233 -176 -232Q-184 -230 -189.5 -223.0Q-195 -216 -195 -208L-194 -202Q-150 -21 -109 134Q-109 138 -108 142Q-107 143 -107 144H-106Q-23 462 23 611Q31 641 42.5 655.0Q54 669 63 669Q78 669 80 640Q80 623 71 597Q14 454 -26 331Q58 493 139.5 570.5Q221 648 269 648L283 646Q316 634 316 592Q316 554 294 499Q343 519 375.0 528.0Q407 537 434 541H438Q452 541 453 532Q453 527 448.0 521.5Q443 516 435 516Q379 509 281 470Q229 361 152 281Q123 252 99.0 239.5Q75 227 57 227Q20 227 18 270Q18 291 31.5 318.0Q45 345 74 373Q147 436 251 480Q287 543 287 584Q287 602 278 613Q272 620 260 620Q227 620 162.0 564.0Q97 508 32.0 408.0Q-33 308 -73 174L-85 128V125Q-123 -26 -146 -214Q-148 -222 -155.0 -227.5Q-162 -233 -170 -233ZM52 266Q74 266 126 313Q172 356 232 449Q135 401 89 355Q63 330 51.0 310.5Q39 291 39 279Q39 267 52 266Z"/><path transform="translate(3617 1455) scale(1 -1)" d="M152 260Q101 260 97 341Q97 388 113 447Q71 388 30.0 345.0Q-11 302 -41 302Q-53 302 -62.0 311.0Q-71 320 -71 341Q-71 379 -47.5 439.0Q-24 499 7.5 548.5Q39 598 66 608Q74 611 81 611Q96 611 107.0 599.5Q118 588 122 563Q122 541 97 538Q89 538 82.5 543.0Q76 548 73 556Q47 542 19.0 500.0Q-9 458 -29.0 411.0Q-49 364 -49 340Q-49 326 -40 325Q-28 325 2.5 354.5Q33 384 75.0 448.0Q117 512 166 614Q170 624 177.5 628.5Q185 633 193 633Q202 633 209.0 627.5Q216 622 216 611Q216 606 213 598Q198 581 175.5 534.5Q153 488 134.5 432.0Q116 376 116 335Q116 315 123.0 298.5Q130 282 147 282Q178 282 231.5 336.0Q285 390 331.0 448.5Q377 507 390 531Q398 541 404 541Q409 540 412.0 537.5Q415 535 415 529Q415 524 412 518Q398 495 369.0 453.5Q340 412 302.5 367.5Q265 323 225.5 291.5Q186 260 152 260Z"/><path transform="translate(4009 1455) scale(1 -1)" d="M9 199Q-36 199 -63.0 226.5Q-90 254 -90 306Q-90 373 -35 478Q-25 497 -6.0 526.0Q13 555 38 584Q72 623 100.5 640.0Q129 657 151 657Q200 657 203 589Q203 556 184 511Q179 501 167.0 495.5Q155 490 144 490Q137 490 132.0 493.0Q127 496 127 501Q127 506 131 513Q162 569 162 599Q162 619 148 620Q127 620 73 561Q24 505 -17.5 429.0Q-59 353 -59 297Q-59 271 -46 253Q-28 231 6 231Q44 231 99.0 260.0Q154 289 216 348Q270 401 312.5 450.5Q355 500 375 526Q387 541 395 541L399 540Q404 537 404 531Q404 523 396 512Q392 507 388 502Q332 423 237 322Q173 259 114.0 229.0Q55 199 9 199Z"/><path transform="translate(4390 1455) scale(1 -1)" d="M9 199Q-37 199 -64.0 226.5Q-91 254 -91 306Q-91 340 -78.0 383.0Q-65 426 -36 478Q-22 504 8.0 546.5Q38 589 75.5 624.0Q113 659 148 659Q168 659 184 644Q203 626 203 599Q203 568 181.5 532.5Q160 497 123.5 472.5Q87 448 43 448Q21 448 -5 457Q-11 447 -16 436Q-60 350 -60 300Q-60 231 5 231Q43 231 98.5 260.5Q154 290 216 348Q269 401 311.5 450.5Q354 500 374 526Q385 541 394 541Q394 541 394.5 541.0Q395 541 396.5 540.5Q398 540 399.0 539.0Q400 538 401.0 536.0Q402 534 403 531V529Q403 522 396 512Q387 500 376 486Q320 411 237 322Q173 259 114.0 229.0Q55 199 9 199ZM21 477Q62 477 93.5 502.0Q125 527 143.0 558.5Q161 590 161 608Q161 622 150 623Q135 623 100.0 591.0Q65 559 6 478Z"/><path transform="translate(4768 1455) scale(1 -1)" d="M55 -242 47 -240Q30 -232 30 -216L31 -209Q89 -53 233 222Q309 369 381.0 517.0Q453 665 501.0 791.5Q549 918 549 994Q549 1017 544 1034Q534 1062 503.5 1078.0Q473 1094 422 1094Q321 1094 138 1022L131 1021Q115 1021 106 1038L104 1047Q104 1062 121 1070Q306 1134 411 1134Q480 1134 519.0 1110.0Q558 1086 573 1042Q580 1020 580 990Q580 908 533.0 778.5Q486 649 416.0 499.0Q346 349 272 201Q137 -64 78 -224Q75 -232 69.0 -237.0Q63 -242 55 -242Z"/><path transform="translate(5378 1455) scale(1 -1)" d="M71 197 64 198Q46 201 38.0 212.0Q30 223 30 237Q30 255 42.0 271.0Q54 287 73 287L81 286Q97 283 104.5 271.5Q112 260 112 247Q112 229 101.0 213.0Q90 197 71 197Z"/><path transform="translate(5520 1455) scale(1 -1)" d="M21 295H19Q-7 298 -19.0 322.5Q-31 347 -31 383Q-31 453 -0.5 537.5Q30 622 68 661Q75 667 84 667Q94 667 103 659L109 660Q122 660 131 650Q146 635 147 598V586Q147 567 144 544Q158 528 174 516Q195 501 220 501H224Q265 504 300 539Q305 543 310 543Q314 543 318 540Q322 535 322 530Q322 526 319 522Q276 478 227 476H223Q189 476 161 496Q150 504 140 513Q131 467 116 423Q93 356 68.0 325.5Q43 295 21 295ZM41 343Q51 343 65.5 364.5Q80 386 94 430Q109 478 117 529L118 539Q117 542 114 545Q95 577 89 608Q68 581 43.0 510.5Q18 440 18 389Q18 353 38 343ZM122 582V599Q121 625 114 633Q114 634 113.5 634.0Q113 634 112 634V628Q112 608 122 582Z"/><path transform="translate(5820 1455) scale(1 -1)" d="M47 129Q35 129 25 133Q10 139 3.5 154.5Q-3 170 -3 192Q-3 238 16.5 299.5Q36 361 58.5 413.5Q81 466 92 490Q93 490 93 491Q36 491 12.0 505.0Q-12 519 -14 547Q-14 573 -1.5 602.5Q11 632 22 648Q31 662 43 662Q53 662 61.5 655.0Q70 648 70 637Q70 633 67 626Q60 610 54 598Q37 568 37 555Q37 539 73 541L133 543Q143 543 150.0 536.5Q157 530 158 520Q158 512 155.0 507.5Q152 503 147 498Q144 495 141 491Q106 442 65.0 347.0Q24 252 24 197Q24 169 42 162Q83 162 188.5 276.0Q294 390 370 526Q372 530 373 533Q375 539 378.0 542.5Q381 546 388 546Q393 546 397.0 543.0Q401 540 401 534V532Q400 525 394 512Q373 471 332.0 408.0Q291 345 240.5 281.0Q190 217 139.0 173.0Q88 129 47 129Z"/><path transform="translate(6193 1455) scale(1 -1)" d="M-294 -320Q-324 -320 -342.5 -301.0Q-361 -282 -361 -246Q-361 -209 -337.5 -155.0Q-314 -101 -261 -33Q-108 152 97 324Q123 412 139 485Q95 419 44.5 361.0Q-6 303 -41 303Q-54 303 -64 314Q-71 323 -71 341Q-71 379 -48.0 439.0Q-25 499 6.5 548.5Q38 598 66 608Q74 611 81 611Q108 611 121 570L122 563Q122 547 104 539L97 538Q81 538 73 556Q60 546 34.0 506.0Q8 466 -14.5 418.0Q-37 370 -37 341Q-37 325 -29 326Q-11 326 35.0 390.0Q81 454 122.0 528.0Q163 602 172 641Q174 649 181.0 654.5Q188 660 196 660Q208 659 214.0 654.0Q220 649 220 637L219 629Q208 591 199 556Q180 488 141 360Q311 501 382 539Q386 542 390 542Q396 542 399.0 537.5Q402 533 402 529Q402 522 394 517Q272 440 130 321Q129 320 127 319Q87 192 34.5 65.5Q-18 -61 -85 -164Q-141 -245 -196.5 -282.5Q-252 -320 -294 -320ZM75 558 80 560Q79 560 78.0 559.5Q77 559 76 559Q76 558 75 558ZM-292 -296Q-265 -296 -225.5 -268.0Q-186 -240 -140 -180Q-73 -90 -11.5 37.5Q50 165 85 284Q-120 115 -245 -45Q-292 -109 -313.0 -159.5Q-334 -210 -334 -243Q-334 -294 -292 -296Z"/></g><g transform="translate(6696 152) scale(3.1188)"><image class="sig-heart" href="img/brand/heart-ink.png" x="0" y="0" width="512" height="512" filter="url(#inkf)" mask="url(#hmm)"/></g></svg>
+    </div>
+    <p class="presents">presents</p>
+  </div>
+  <div class="brand">
+    <img src="img/brand/womlogo.webp" alt="Wheel of Misfortune" decoding="async">
+    <p class="brand-type" aria-hidden="true">Wheel <span>of</span> Misfortune</p>
+  </div>
+</section>
+
+<!-- ============ opening menu: the players ============ -->
+<section id="names" class="screen" hidden aria-labelledby="names-title">
+  <form id="names-form" class="menu" autocomplete="off">
+    <img class="menu-logo" src="img/brand/womlogo.webp" alt="" decoding="async">
+    <h1 id="names-title" class="menu-title">Wheel <span>of</span> Misfortune</h1>
+    <p class="menu-lede">Two names. One wheel. No refunds.</p>
+    <label class="seat">
+      <span class="role">The Sovereign</span>
+      <input id="giver" name="giver" type="text" maxlength="24" required placeholder="name" autocapitalize="words" spellcheck="false">
+      <span class="sig-cap" aria-hidden="true">signature</span>
+    </label>
+    <label class="seat">
+      <span class="role">the subject</span>
+      <input id="receiver" name="receiver" type="text" maxlength="24" required placeholder="name" autocapitalize="none" spellcheck="false">
+      <span class="sig-cap" aria-hidden="true">signature</span>
+    </label>
+    <button class="spin-btn" type="submit">Enter</button>
+  </form>
+</section>
+
+<!-- ============ setup ============ -->
+<section id="setup" class="screen" hidden aria-labelledby="setup-title">
+  <header class="bar">
+    <button class="icon-btn" type="button" data-go="names" aria-label="Change players" title="Change players">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+    </button>
+    <h1 id="setup-title">The Decree</h1>
+    <div class="bar-r">
+      <button class="icon-btn" type="button" data-editor aria-label="Wheel workshop" title="Wheel workshop">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l4.5-1 10-10a2.1 2.1 0 0 0-3-3l-10 10L4 20z"/><path d="M13.5 7.5l3 3"/></svg>
+      </button>
+      <button class="icon-btn" type="button" data-settings aria-label="Settings" title="Settings">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="setup-body">
+    <p class="pairing"><span class="p-giver"></span><span class="amp" aria-label="and">&amp;</span><span class="p-receiver"></span></p>
+
+    <h2 class="sect">The Game</h2>
+    <div class="modes" role="radiogroup" aria-label="Game mode">
+      <label class="mode">
+        <input type="radio" name="mode" value="default" checked>
+        <span class="mode-card">
+          <span class="mode-name">The Classic</span>
+          <span class="mode-desc"><b class="p-giver"></b> and <b class="p-receiver"></b> are bound by every result. Mercy is the only way out.</span>
+        </span>
+      </label>
+    </div>
+
+    <h2 class="sect">The Wheel</h2>
+    <div id="wheel-list" class="wheels" role="radiogroup" aria-label="Choose a wheel"><p class="wait">Consulting the archive…</p></div>
+
+    <button id="begin" class="spin-btn" type="button" disabled>Take your seats</button>
+  </div>
+</section>
+
+<!-- ============ the game ============ -->
+<section id="game" class="screen" hidden aria-label="The Wheel">
+  <header class="bar">
+    <button class="icon-btn" type="button" data-go="setup" aria-label="Back to the decree" title="Back to the decree">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+    </button>
+    <h1>Wheel <span>of</span> Misfortune <small class="wheel-name"></small></h1>
+    <div class="bar-r">
+      <button id="timer-btn" class="icon-btn" type="button" aria-controls="timer" aria-pressed="false" aria-label="Timer" title="Timer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13.5" r="7.5"/><path d="M12 13.5V9.5M10 2.5h4M12 2.5V6M18.2 6.8l1.3-1.3"/></svg>
+      </button>
+      <button class="icon-btn music-btn" type="button" aria-label="Mute music" title="Music">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V5l11-2v13"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/><path class="slash" d="M3 3l18 18"/></svg>
+      </button>
+      <button class="icon-btn" type="button" data-settings aria-label="Settings" title="Settings">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1"/></svg>
+      </button>
+      <button id="log-btn" class="icon-btn" type="button" aria-label="Record of misfortunes" title="Record of misfortunes">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h10a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3V5"/><path d="M5 5a2 2 0 1 1 4 0v13a3 3 0 0 0 3 3"/><path d="M11 8h5M11 12h5M11 16h3"/></svg>
+        <span class="badge" hidden></span>
+      </button>
+    </div>
+    <!-- the timer: a small panel under the timer icon; closing it ends the timer -->
+    <div id="timer" class="timer" hidden>
+      <div class="led-box">
+        <div class="led" role="timer"></div>
+        <span class="step" aria-hidden="true"></span>
+      </div>
+      <div class="tbtns">
+        <button type="button" data-t="minus" aria-label="Less time (hold to speed up)" title="−1 min · hold for more">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/></svg>
+        </button>
+        <button type="button" data-t="play" aria-label="Start" title="Start / pause">
+          <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>
+          <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg>
+        </button>
+        <button type="button" data-t="stop" aria-label="Stop (back to the set time)" title="Stop">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="1"/></svg>
+        </button>
+        <button type="button" data-t="reset" aria-label="Reset to zero" title="Reset">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.4-5.7"/><path d="M4 4v4h4"/></svg>
+        </button>
+        <button type="button" data-t="plus" aria-label="More time (hold to speed up)" title="+1 min · hold for more">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5v14"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="stage">
+    <div class="wheel-wrap"><canvas id="wheel" aria-label="The wheel"></canvas></div>
+    <div class="console">
+      <button id="result" class="plaque" type="button" disabled>
+        <span class="kicker">The Wheel awaits</span>
+        <span class="name">Spin, if you dare</span>
+      </button>
+      <button id="spin" class="spin-btn" type="button">Spin</button>
+
+    </div>
+  </main>
+</section>
+
+<!-- ============ dialogs ============ -->
+<dialog id="item-dlg" class="smoky">
+  <div class="smoke-in" aria-hidden="true"><i></i><i></i><i></i></div>
+  <button class="x" type="button" data-close aria-label="Close">×</button>
+  <p class="who"></p>
+  <h2></h2>
+  <div class="row">
+    <p class="desc"></p>
+    <img alt="" hidden>
+  </div>
+</dialog>
+
+<dialog id="log-dlg" class="smoky">
+  <div class="smoke-in" aria-hidden="true"><i></i><i></i><i></i></div>
+  <button class="x" type="button" data-close aria-label="Close">×</button>
+  <h2>The Record</h2>
+  <ol class="log"></ol>
+  <button id="log-clear" class="ghost" type="button" hidden>Erase the record</button>
+</dialog>
+
+<dialog id="settings-dlg" class="smoky narrow">
+  <div class="smoke-in" aria-hidden="true"><i></i><i></i><i></i></div>
+  <button class="x" type="button" data-close aria-label="Close">×</button>
+  <h2>Settings</h2>
+  <div class="toggles">
+    <label class="tog"><span><b>Sound effects</b><small>ticks, stings and slot sounds</small></span><input type="checkbox" data-set="sound"><i aria-hidden="true"></i></label>
+    <label class="tog"><span><b>Music</b><small>the soundtrack, shuffled</small></span><input type="checkbox" data-set="music"><i aria-hidden="true"></i></label>
+    <label class="tog"><span><b>Voice</b><small>she announces every result</small></span><input type="checkbox" data-set="voice"><i aria-hidden="true"></i></label>
+  </div>
+  <p class="fine">The timer's klaxon sounds even with effects off.</p>
+</dialog>
+
+<dialog id="editor-dlg" class="smoky wide">
+  <button class="x" type="button" data-ed-close aria-label="Close">×</button>
+  <div class="ed-body"></div>
+</dialog>
+
+<dialog id="confirm-dlg" class="smoky narrow confirm">
+  <p></p>
+  <div class="choices"></div>
+</dialog>
+
+<div id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

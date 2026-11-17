@@ -1,0 +1,8 @@
+# local, per-host
+deploy.conf
+# scratch: screenshots, dev server data, packages
+tools/.shots/
+tools/.devdata/
+wom-*.tar.gz
+__pycache__/
+*.pyc

@@ -1,0 +1,8 @@
+[Unit]
+Description=Wheel of Misfortune: watch the render queue
+
+[Path]
+DirectoryNotEmpty=@DATA@/queue
+
+[Install]
+WantedBy=multi-user.target

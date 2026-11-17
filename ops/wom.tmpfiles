@@ -1,0 +1,10 @@
+# Wheel of Misfortune data. The web server (@WEB_USER@) reads only media/ (Alias).
+d @DATA@            0750 wom @WEB_USER@ -
+d @DATA@/wheels     0700 wom wom  -
+d @DATA@/media      2750 wom @WEB_USER@ -
+d @DATA@/media/tts  2750 wom @WEB_USER@ -
+d @DATA@/queue      0700 wom wom  -
+d @DATA@/incoming   0700 wom wom  -
+d @DATA@/work       0700 wom wom  -
+d @DATA@/failed     0700 wom wom  -
+d @DATA@/throttle   0700 wom wom  -

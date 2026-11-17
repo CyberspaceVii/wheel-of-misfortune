@@ -1,0 +1,9 @@
+# Copy to deploy.conf and edit. ./deploy.sh reads it; nothing in the app is tied to a host name.
+WOM_URL=/wheelofmisfortune                          # URL path the game is served at ("" for a site root)
+WOM_WEBROOT=/srv/http/example.org/wheelofmisfortune  # where public/ goes (the docroot + WOM_URL)
+WOM_APP=/srv/http/example.org/wom                    # api.php + starter wheels (outside the docroot)
+WOM_LIB=/usr/local/lib/wom                           # worker.py
+WOM_DATA=/var/lib/wom                                # wheels, media, queue (owned by user wom)
+WOM_SOCK=/run/php-fpm/wom.sock                       # the php-fpm pool's socket
+WOM_WEB_USER=http                                    # the web server's user and group (www-data on Debian)
+WOM_PIPER=/opt/piper                                 # piper binary + voices/en_GB-cori-high.onnx(.json)

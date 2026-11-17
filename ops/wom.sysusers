@@ -1,0 +1,2 @@
+# Wheel of Misfortune: owns @DATA@; runs the php-fpm pool "wom" and wom-worker.service.
+u wom - "Wheel of Misfortune" @DATA@ /usr/bin/nologin
