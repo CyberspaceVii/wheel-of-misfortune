@@ -6,18 +6,23 @@ It runs on any web server with PHP. There is no database, no build step and no a
 
 **18+ only.** The six starter wheels are explicit BDSM and kink content (domination and submission, impact play, chastity, worship, humiliation). Don't host it where minors can reach it. Every visit starts with an age gate.
 
+There's also an Android app with everything built in, which works offline: [wheel-of-misfortune-android](https://github.com/CyberspaceVii/wheel-of-misfortune-android).
+
 Topics: adult party game, couples game, kinky BDSM and S&M game, kink, dare wheel, spin the wheel, random picker, truth or dare for adults, self-hosted web game, vanilla JavaScript, HTML5 canvas, PHP, Piper TTS.
 
 ## How to play
 
-1. Confirm you're 18 or older. That click also starts the music.
+1. Confirm you're 18 or older. That click also starts the music. After the first second and a half, a tap skips the opening titles.
 2. Enter the two names. Player 1 is the Sovereign, player 2 is the subject, though a wheel can send a dare either way.
 3. Pick a wheel on the Decree screen.
-4. Spin with the button, the space bar, or by flicking the wheel. When it stops, the slot's sound plays, a voice reads the result, and the plaque shows the full dare with both names filled in.
+4. Spin with the button, the space bar, or by flicking the wheel. When it stops, the slot's sound plays and a voice reads the result. Tap the plaque ("tap to read more") for the full dare with both names filled in. A rare slot (weight 3 or less, and less than an even share of the wheel) is announced by three racing heartbeats first.
 5. Use the timer for anything that lasts a set time. It counts down from whatever you set, or runs as a stopwatch from zero. Hold + or - to move in bigger steps.
 6. The Record lists every result so far.
+7. When the scene is over, tap one of the faces either side of Spin: the smile says player 1 wins, the frown says player 2 loses. After you confirm, the scene goes into the High Scores (on the main menu) with both names, how many spins it took and the verdict. The next spin starts a new scene.
 
-The settings let you turn sound effects, music and the voice on or off.
+The Record, the open scene and the High Scores are kept in the browser on that device, not on the server.
+
+The settings let you turn sound effects, music and the voice on or off. On phones that can vibrate (Android), there's also vibration: a click for every pin that passes the pointer, a knock when the wheel stops, and the heartbeat on a rare slot.
 
 ## Wheels and the Workshop
 
@@ -258,7 +263,8 @@ You handle:
 ```
 public/        the game page (installed to WOM_WEBROOT)
   js/          main (screens), game, wheel (canvas), spin and rng, editor (the Workshop),
-               music, audio, timer, clock, ui, settings, api, intro, wall
+               scene (verdicts and High Scores), music, audio, haptics, timer, clock, ui,
+               settings, api, intro, wall
   css/ fonts/ type/ img/ music/
   leave.html   where the age gate sends anyone under 18
 server/        api.php and starter-wheels.json (installed to WOM_APP)
