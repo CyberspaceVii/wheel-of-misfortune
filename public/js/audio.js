@@ -68,6 +68,42 @@ export function thud() {
   o.stop(now + 0.4);
 }
 
+// A racing heartbeat for a rare landing: lub-dub, `beats` times at `bpm`, in the same rhythm as
+// haptics.heartbeat(). Returns its length in seconds (0 when sound is off).
+export function heartbeat(beats = 4, bpm = 150) {
+  if (!ctx || !settings.sound) return 0;
+  const period = 60 / bpm;
+  const t0 = ctx.currentTime + 0.02;
+  const beat = (at, f0, vol, len) => {
+    const o = ctx.createOscillator();
+    const g = ctx.createGain();
+    o.frequency.setValueAtTime(f0, at);
+    o.frequency.exponentialRampToValueAtTime(f0 * 0.6, at + len);
+    g.gain.setValueAtTime(0.0001, at);
+    g.gain.exponentialRampToValueAtTime(vol, at + 0.012);
+    g.gain.exponentialRampToValueAtTime(0.001, at + len);
+    o.connect(g).connect(master);
+    o.start(at);
+    o.stop(at + len + 0.02);
+    // a soft thump of noise on top, so phone speakers that can't do 60 Hz still carry it
+    const n = noise();
+    const lp = ctx.createBiquadFilter();
+    lp.type = 'lowpass';
+    lp.frequency.value = 320;
+    const ng = ctx.createGain();
+    ng.gain.setValueAtTime(vol * 0.9, at);
+    ng.gain.exponentialRampToValueAtTime(0.001, at + 0.06);
+    n.connect(lp).connect(ng).connect(master);
+    n.start(at, Math.random() * 0.5, 0.08);
+  };
+  for (let i = 0; i < beats; i++) {
+    const at = t0 + i * period;
+    beat(at, 62, 0.95, 0.13);          // lub
+    beat(at + 0.16, 74, 0.6, 0.1);     // dub
+  }
+  return beats * period;
+}
+
 // Placeholder stings until real uploads exist. Each resolves when it ends.
 const synths = {
   gong(now) {

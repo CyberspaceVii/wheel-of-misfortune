@@ -1,7 +1,7 @@
-// Per-viewer settings (sound effects, music, voice), kept in localStorage.
+// Per-viewer settings (sound effects, music, voice, vibration), kept in localStorage.
 
 const KEY = 'wom.settings';
-const DEFAULTS = { sound: true, music: true, voice: true };
+const DEFAULTS = { sound: true, music: true, voice: true, haptics: true };
 
 let state = { ...DEFAULTS };
 try { state = { ...DEFAULTS, ...JSON.parse(localStorage.getItem(KEY)) }; } catch {}

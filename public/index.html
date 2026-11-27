@@ -66,6 +66,7 @@
       <span class="sig-cap" aria-hidden="true">signature</span>
     </label>
     <button class="spin-btn" type="submit">Enter</button>
+    <button id="scores-btn" class="ghost" type="button">High Scores</button>
   </form>
 </section>
 
@@ -163,8 +164,12 @@
         <span class="kicker">The Wheel awaits</span>
         <span class="name">Spin, if you dare</span>
       </button>
-      <button id="spin" class="spin-btn" type="button">Spin</button>
-
+      <!-- Spin, flanked by the verdict that ends the scene (scene.js draws the faces) -->
+      <div class="spin-row">
+        <button id="verdict-win" class="face-btn" type="button" disabled></button>
+        <button id="spin" class="spin-btn" type="button">Spin</button>
+        <button id="verdict-lose" class="face-btn" type="button" disabled></button>
+      </div>
     </div>
   </main>
 </section>
@@ -189,6 +194,14 @@
   <button id="log-clear" class="ghost" type="button" hidden>Erase the record</button>
 </dialog>
 
+<dialog id="scores-dlg" class="smoky">
+  <div class="smoke-in" aria-hidden="true"><i></i><i></i><i></i></div>
+  <button class="x" type="button" data-close aria-label="Close">×</button>
+  <h2>High Scores</h2>
+  <ol class="log scores"></ol>
+  <button id="scores-clear" class="ghost" type="button" hidden>Erase the scores</button>
+</dialog>
+
 <dialog id="settings-dlg" class="smoky narrow">
   <div class="smoke-in" aria-hidden="true"><i></i><i></i><i></i></div>
   <button class="x" type="button" data-close aria-label="Close">×</button>
@@ -197,6 +210,7 @@
     <label class="tog"><span><b>Sound effects</b><small>ticks, stings and slot sounds</small></span><input type="checkbox" data-set="sound"><i aria-hidden="true"></i></label>
     <label class="tog"><span><b>Music</b><small>the soundtrack, shuffled</small></span><input type="checkbox" data-set="music"><i aria-hidden="true"></i></label>
     <label class="tog"><span><b>Voice</b><small>she announces every result</small></span><input type="checkbox" data-set="voice"><i aria-hidden="true"></i></label>
+    <label class="tog"><span><b>Vibration</b><small>feel every pin, and a rare landing</small></span><input type="checkbox" data-set="haptics"><i aria-hidden="true"></i></label>
   </div>
   <p class="fine">The timer's klaxon sounds even with effects off.</p>
 </dialog>

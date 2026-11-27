@@ -59,7 +59,10 @@ export function tagField(ta) {
 // choices: [{ key, label, danger?, quiet? }]  (the last one gets focus)
 export function choose(message, choices) {
   const d = $('#confirm-dlg');
-  d.querySelector('p').textContent = message;
+  // a message may be a node: the scene verdict carries a face and the player's name in script
+  const p = d.querySelector('p');
+  if (message instanceof Node) p.replaceChildren(message);
+  else p.textContent = message;
   const row = d.querySelector('.choices');
   let answer = null;
   const btns = choices.map((c) =>

@@ -2,10 +2,12 @@
 // wheel) → the game. Settings, music and the timer live here too.
 
 import * as audio from './audio.js';
+import * as haptics from './haptics.js';
 import * as music from './music.js';
 import * as settings from './settings.js';
 import * as api from './api.js';
 import * as game from './game.js';
+import * as scene from './scene.js';
 import { playIntro } from './intro.js';
 import { initTimer } from './timer.js';
 import { initClock } from './clock.js';
@@ -30,8 +32,10 @@ menuLogo.addEventListener('error', () => menuLogo.classList.add('gone'), { once:
 if (menuLogo.complete && !menuLogo.naturalWidth) menuLogo.classList.add('gone');
 
 // ---- settings ----
+if (!haptics.can) $('[data-set="haptics"]').closest('.tog').hidden = true; // nothing to vibrate
 settings.watch((k, v) => {
   if (k === 'sound' || k === 'voice') audio.settings[k] = v;
+  if (k === 'haptics') haptics.settings.haptics = v;
   if (k === 'music') {
     music.setMuted(!v);
     for (const b of document.querySelectorAll('.music-btn')) {
@@ -183,6 +187,10 @@ $('#begin').addEventListener('click', async () => {
     b.disabled = false;
   }
 });
+
+// ---- scenes and the High Scores ----
+scene.init({ isBusy: () => game.busy() });
+scene.setPlayers(players);
 
 // ---- editor ----
 initEditor({ changed: () => { if (screen === 'setup') loadWheels(); } });

@@ -3,8 +3,10 @@
 
 import { WheelView } from './wheel.js';
 import { planSpin, indexAt, Flapper, TAU, POINTER } from './spin.js';
-import { weightedIndex, randRange, rand } from './rng.js';
+import { weightedIndex, randRange, rand, clampWeight } from './rng.js';
 import * as audio from './audio.js';
+import * as haptics from './haptics.js';
+import * as scene from './scene.js';
 import * as music from './music.js';
 import { $, el, nm, fillInto, confirmBox } from './ui.js';
 import { media } from './api.js';
@@ -40,7 +42,7 @@ let log = [];
 try { log = JSON.parse(localStorage.getItem(LOG_KEY)) || []; } catch { log = []; }
 const saveLog = () => { try { localStorage.setItem(LOG_KEY, JSON.stringify(log.slice(0, 300))); } catch {} };
 
-export function setPlayers(p) { players = { ...p }; }
+export function setPlayers(p) { players = { ...p }; scene.setPlayers(players); }
 
 export function setWheel(w) {
   wheel = w;
@@ -74,6 +76,7 @@ export function leave() {
   cancelAnimationFrame(raf);
   seq?.abort();
   audio.stopSound();
+  haptics.stop();
 }
 
 export const busy = () => !!plan;
@@ -97,6 +100,7 @@ export function spin({ flick = false, dir = 1, strength, drama } = {}) {
   audio.unlock();
   seq?.abort();
   audio.stopSound();
+  haptics.stop();
   const target = weightedIndex(wheel.items);
   plan = planSpin({ rotation0: rotation, n, target, dir, strength: strength ?? randRange(0.35, 0.9), flick, drama });
   t0 = performance.now();
@@ -123,15 +127,28 @@ function land() {
   root.classList.remove('spinning');
   $('#spin').disabled = false;
   audio.thud();
+  haptics.thud();
 
   const item = wheel.items[target];
   const entry = { n: (log[0]?.n || 0) + 1, at: Date.now(), wheel: wheel.name, giver: players.giver, receiver: players.receiver, item };
   log.unshift(entry);
   saveLog();
+  scene.spun(wheel.name);
   renderLogBadge();
   showResult(entry);
-  runSequence(item);
+  runSequence(item, isRare(wheel.items, target));
 }
+
+// "rare" as the Workshop words it (weight 3 or less) and less than an even share of this wheel,
+// so a wheel where every slot is rare doesn't race the heart on every spin
+function isRare(items, i) {
+  let total = 0;
+  for (const it of items) total += clampWeight(it.weight);
+  const w = clampWeight(items[i].weight);
+  return w <= 3 && w / total < 1 / items.length;
+}
+
+const HEART = { beats: 3, bpm: 150 };
 
 const wait = (ms, sig) =>
   new Promise((res) => {
@@ -140,12 +157,21 @@ const wait = (ms, sig) =>
   });
 
 // land → 1–2 s → slot sound (if any, to its end) → 1 s → voice
-async function runSequence(item) {
+// a rare slot: land → 0.4 s → three racing heartbeats → 0.6 s → slot sound → 1 s → voice
+async function runSequence(item, rare) {
   seq = new AbortController();
   const sig = seq.signal;
   music.duck(true);
-  sig.addEventListener('abort', () => music.duck(false), { once: true });
-  await wait(randRange(1000, 2000), sig);
+  sig.addEventListener('abort', () => { music.duck(false); haptics.stop(); }, { once: true });
+  if (rare) {
+    await wait(400, sig);
+    if (sig.aborted) return;
+    audio.heartbeat(HEART.beats, HEART.bpm);
+    haptics.heartbeat(HEART.beats, HEART.bpm);
+    await wait((HEART.beats * 60000) / HEART.bpm + 600, sig);
+  } else {
+    await wait(randRange(1000, 2000), sig);
+  }
   if (sig.aborted) return;
   await audio.playSound(media(item.sound), sig);
   if (sig.aborted) return;
@@ -271,7 +297,10 @@ function frame(now) {
     phase = winIndex != null && now - landedAt < 2600 ? 'win' : 'idle';
   }
 
-  if (flapper.update(rotation, dt)) audio.tick(flapper.speed);
+  if (flapper.update(rotation, dt)) {
+    audio.tick(flapper.speed);
+    haptics.pin(flapper.speed);
+  }
 
   view.draw({
     rotation,
